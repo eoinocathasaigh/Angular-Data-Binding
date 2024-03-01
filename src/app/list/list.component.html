@@ -1,0 +1,14 @@
+<p>List of presidents</p>
+<ul>
+    <!--Displaying the list of the presidents names-->
+    @for (name of presidents; track name) {
+        <li>{{name.name}} {{name.term}}</li>
+    }
+</ul>
+
+<ol>
+    <!--Another way of doing the exact same thing
+    For normally using our variables we can use {{x}} to access the names
+    but since we switched to using an any we need to use {{x.name}} or {{x.term}} to access their individual elements-->
+    <li *ngFor="let x of presidents">{{x.name}} {{x.term}}</li>
+</ol>
